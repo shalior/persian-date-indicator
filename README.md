@@ -2,6 +2,9 @@
 
 This project provides a simple Ubuntu desktop application that displays the current Persian date in the top panel. It utilizes a Python script and a `.desktop` file for easy access and integration with the Ubuntu desktop environment.
 
+![image](https://github.com/shalior/persian-date-indicator/assets/42506404/c56d6a6a-2aa4-43cd-876b-355a47190dfd)
+
+
 ## Features
 
 - Displays the current Persian date in the top panel.
