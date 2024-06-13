@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Persian date
+Comment=Shows persian date
+Exec=/usr/bin/python3 /opt/persian-date/script.py
+Terminal=false
+Type=Application
+Categories=Utility;
