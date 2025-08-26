@@ -4,10 +4,17 @@ import subprocess
 import gi
 import jdatetime
 gi.require_version('Gtk', '3.0')
-gi.require_version('AppIndicator3', '0.1')
-from gi.repository import Gtk, AppIndicator3, GObject, GLib
+try:
+    gi.require_version('AppIndicator3', '0.1')
+    from gi.repository import AppIndicator3
+except ValueError:
+    # Fallback for newer Ubuntu versions
+    gi.require_version('AyatanaAppIndicator3', '0.1')
+    from gi.repository import AyatanaAppIndicator3 as AppIndicator3
 
-class DNSIndicator:
+from gi.repository import Gtk, GObject, GLib
+
+class PersianDateIndicator:
     def __init__(self):
         self.indicator = AppIndicator3.Indicator.new(
             "persian-date-indicator",
@@ -38,7 +45,7 @@ class DNSIndicator:
         return True  # return True to keep the timeout going
 
 def main():
-    indicator = DNSIndicator()
+    indicator = PersianDateIndicator()
     GObject.threads_init()
     Gtk.main()
 
