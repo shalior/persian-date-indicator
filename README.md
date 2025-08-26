@@ -30,6 +30,11 @@ To install the Persian Date Indicator on your Ubuntu system, follow these steps:
 
    Alternatively, download the source code directly from the project's GitHub page.
 
+   Dependencies:
+    
+   ```bash
+   sudo apt-get install python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-ayatanaappindicator3-0.1
+   ```
 
 ### Manual Installation
 
